@@ -91,7 +91,7 @@
         </div>
 
         <div>
-          <button id="nav_toggle" class="h-8 w-8 md:hidden">
+          <div id="nav_toggle" class="h-8 w-8 md:hidden">
             <svg class="h-full w-auto" xmlns="http://www.w3.org/2000/svg" width="192" height="192" fill="green"
               viewBox="0 0 256 256">
               <rect width="256" height="256" fill="none"></rect>
@@ -102,47 +102,61 @@
               <line x1="40" y1="192" x2="216" y2="192" stroke="green" stroke-linecap="round" stroke-linejoin="round"
                 stroke-width="16"></line>
             </svg>
-          </button>
+          </div>
 
           <div id="nav_content" class="absolute right-0 hidden md:block md:relative w-full md:w-auto">
-            <nav class="w-full bg-white rounded shadow-lg px-6 py-4 mt-4 text-center md:p-0 md:mt-0 md:shadow-none">
+            <nav class="w-full bg-white rounded shadow-lg px-6 py-4 mt-4 text-left md:p-0 md:mt-0 md:shadow-none">
               <ul class="md:flex items-center">
-                <li class="md:ml-4">
+                <li class="dropdown-container md:ml-4">
                   <a class="py-2 inline-block text-green-600 md:px-2 font-semibold hover:underline"
                     href="/passports.html">Passports</a>
+                  <ul class="dropdown">
+                    <li class="dropdown-menu-item md:pl-4 md:hidden lg:block">
+                      <a class="pt-4 pb-2 inline-block text-green-600 md:px-2 font-semibold hover:underline"
+                        href="/subject-to-regularization-visa.html">New Application</a>
+                    </li>
+                    <li class="dropdown-menu-item md:pl-4 md:hidden lg:block">
+                      <a class="py-2 inline-block text-green-600 md:px-2 font-semibold hover:underline"
+                        href="/payment-outside-nigeria-visa.html">Renewal</a>
+                    </li>
+                    <li class="dropdown-menu-item md:pl-4 md:hidden lg:block">
+                      <a class="pt-2 pb-4 inline-block text-green-600 md:px-2 font-semibold hover:underline"
+                        href="/business-visa.html">Childrens' Passport</a>
+                    </li>
+                  </ul>
                 </li>
-                <li class="md:ml-4">
+                <li class="dropdown-container md:ml-4">
                   <a id="visa" class="py-2 inline-block text-green-600 md:px-2 font-semibold hover:underline"
                     href="/visas.html">Visas</a>
-                  <ul class="block md:hidden">
-                    <li class="md:ml-4 md:hidden lg:block">
-                      <a class="py-2 inline-block text-green-600 md:px-2 font-semibold hover:underline"
+                  <ul class="dropdown">
+                    <li class="dropdown-menu-item">
+                      <a class="pt-4 pb-2 inline-block text-green-600 md:px-2 font-semibold hover:underline"
                         href="/freezone.html">Entry/Freezone</a>
                     </li>
-                    <li class="md:ml-4 md:hidden lg:block">
+                    <li class="dropdown-menu-item">
                       <a class="py-2 inline-block text-green-600 md:px-2 font-semibold hover:underline"
                         href="/visitor-visa.html">Tourist/Visitor</a>
                     </li>
-                    <li class="md:ml-4 md:hidden lg:block">
+                    <li class="dropdown-menu-item">
                       <a class="py-2 inline-block text-green-600 md:px-2 font-semibold hover:underline"
                         href="/subject-to-regularization-visa.html">Subject to Regularization</a>
                     </li>
-                    <li class="md:ml-4 md:hidden lg:block">
+                    <li class="dropdown-menu-item">
                       <a class="py-2 inline-block text-green-600 md:px-2 font-semibold hover:underline"
                         href="/payment-outside-nigeria-visa.html">Payment outside Nigeria</a>
                     </li>
-                    <li class="md:ml-4 md:hidden lg:block">
-                      <a class="py-2 inline-block text-green-600 md:px-2 font-semibold hover:underline"
+                    <li class="dropdown-menu-item">
+                      <a class="pt-2 pb-4 inline-block text-green-600 md:px-2 font-semibold hover:underline"
                         href="/business-visa.html">Business</a>
                     </li>
                   </ul>
                 </li>
-                <li class="md:ml-4 md:hidden lg:block">
+                <li class="md:ml-4 lg:block">
                   <a class="py-2 inline-block text-green-600 md:px-2 font-semibold hover:underline"
                     href="/delivery.html">Passport Delivery</a>
                 </li>
                 <li>
-                  <a class="py-2 inline-block text-green-600 md:hidden lg:block font-semibold hover:underline"
+                  <a class="py-2 inline-block text-green-600 lg:block font-semibold hover:underline"
                     href="/about_us.html">About Us</a>
                 </li>
                 <li class="md:ml-6 mt-3 md:mt-0">
@@ -160,9 +174,10 @@
     <!-- start of Hero -->
     <div class="rounded-br-3xl md:rounded-br-40xl overflow-hidden">
       <section
-        class="cover relative bg-gradient-to-r from-blue-500 to-green-400 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 overflow-hidden py-48 flex items-center">
+        class="cover relative bg-gradient-to-r from-green-600  via-green-800 to-transparent px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 overflow-hidden py-48 flex items-center">
         <div class="h-full absolute top-0 left-0 right-0 z-0">
-          <img src="images/passport_only.jpg" alt="" class="object-right w-full h-full object-cover opacity-50" />
+          <img src="images/passport_only.jpg" alt=""
+            class="object-right w-full h-full object-cover opacity-50 md:opacity-70" />
         </div>
 
         <div class="lg:w-3/4 xl:w-2/4 relative z-10 h-100 lg:mt-16">
@@ -185,24 +200,24 @@
     <section class="relative px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-16 md:py-32 bg-gray-50">
       <div class="md:flex md:gap-y-0 md:flex-row lg:-mx-8">
         <div class="w-full lg:w-1/2 lg:px-8">
-          <h6 class="text-sm uppercase font-semibold tracking-widest text-gray-500">
-            Our specialty
-          </h6>
+          <img src="images/laptop.jpg" alt="" />
+        </div>
+        <div class="w-full lg:w-1/2 lg:px-8">
           <h2 class="text-3xl leading-tight font-bold mt-4">
-            This is the start of your business success
+            Simplify your passport and visa process
           </h2>
           <p class="text-lg font-medium mt-4">
-            Where industry insight and marketing expertise meet
+            Where our experience and passion meet to give you results
           </p>
           <p class="mt-2 leading-relaxed">
-            Donec convallis sollicitudin facilisis. Integer nisl ligula,
-            accumsan non tincidunt ac, imperdiet in enim. Donec efficitur
-            ullamcorper metus, eu venenatis nunc. Nam eget neque tempus,
-            mollis sem a, faucibus mi.
+            At VisaPassNg we make sure all your application processes are made easier.
+            From applications for a new passport, renewal of your old passport or passports for your
+            children. We do it all for you.
+            Come over and see for yourself.
           </p>
         </div>
 
-        <div class="w-full px-4 mt-24 md:mt-0 lg:w-1/2 lg:px-8">
+        <!-- <div class="w-full px-4 mt-24 md:mt-0 lg:w-1/2 lg:px-8">
           <div class="flex flex-col md:flex-row">
             <div>
               <div class="flex justify-center items-center w-16 h-16 bg-blue-100 rounded-full">
@@ -245,10 +260,11 @@
               </p>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
 
+    <!-- start of services section -->
     <section class="relative bg-gray-50 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 pt-16 md:pt-8 pb-40">
       <!-- Start of services cards -->
       <div class="text-center font-bold">
@@ -507,51 +523,42 @@
         </div>
     </section>
 
+
     <!-- start of Blog Article section -->
-    <!-- <section
-        class="relative bg-white px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-12 md:py-32"
-      >
-        <div class="flex flex-col md:flex-row lg:-mx-8">
-          <div class="w-full lg:w-1/2 lg:px-8">
-            <h6
-              class="text-sm uppercase font-semibold tracking-widest text-gray-500"
-            >
-              Improve Right Now
-            </h6>
-            <h2 class="text-3xl leading-tight font-bold mt-4">
-              7 Lead Generation Tips for Dentist Websites
-            </h2>
-            <p class="mt-8 leading-relaxed">
-              Aenean ut tellus tellus. Suspendisse potenti. Nullam tincidunt
-              lacus tellus, sed aliquam est vehicula a. Pellentesque consectetur
-              condimentum nulla, eleifend condimentum purus vehicula in. Donec
-              convallis sollicitudin facilisis. Integer nisl ligula, accumsan
-              non tincidunt ac, imperdiet in enim. Donec efficitur ullamcorper
-              metus, eu venenatis nunc. Nam eget neque tempus, mollis sem a,
-              faucibus mi.
-            </p>
-            <a
-              href="/lead_generation"
-              class="inline-block mt-4 font-medium hover:underline text-gray-500"
-              >Read article &#8594;</a
-            >
-          </div>
-
-          <div class="w-full lg:w-1/2 lg:px-8 my-20 md:my-0">
-            <div class="bg-gray-400 w-full h-96 rounded-lg overflow-hidden">
-              <img
-                src="./images/lead_generation.jpg"
-                alt="A man sitting alone in a coffee shop waiting for a client that will never appear."
-                class="h-full w-full object-cover"
-              />
-            </div>
-
-            <p class="italic text-sm mt-2 text-right">
-              Aenean ante nisi, gravida non mattis semper.
-            </p>
-          </div>
+    <section class="relative bg-white px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-12 md:py-32">
+      <div class="flex flex-col md:flex-row lg:-mx-8">
+        <div class="w-full lg:w-1/2 lg:px-8">
+          <h6 class="text-sm uppercase font-semibold tracking-widest text-gray-500">
+            Visa free travel
+          </h6>
+          <h2 class="text-3xl leading-tight font-bold mt-4">
+            Visa-Free Travel Destinations for Nigerian Passport Holders: Your Ultimate Guide
+          </h2>
+          <p class="mt-8 leading-relaxed">
+            Traveling the world is a dream for many Nigerians, and having a Nigerian passport opens doors to visa-free
+            travel in several countries. In this comprehensive guide, we'll explore the destinations where Nigerian
+            passport holders can travel hassle-free and discover the best times to visit these incredible locations. Get
+            ready to explore the world and create unforgettable memories!
+          </p>
+          <a href="/visa-free-travel.html" class="inline-block mt-4 font-medium hover:underline text-gray-500">Read
+            article
+            &#8594;</a>
         </div>
-      </section> -->
+
+        <div class="w-full lg:w-1/2 lg:px-8 my-12 md:my-0">
+          <div class="bg-gray-400 w-full h-64 lg:h-96 rounded-lg overflow-hidden">
+            <a href="/visa-free-travel.html">
+              <img src="./images/luxury-beach-resort.jpg" alt="A luxury beach resort."
+                class="h-full w-full object-cover" />
+            </a>
+          </div>
+
+          <p class="italic text-sm mt-2 text-right">
+            A luxury beach resort.
+          </p>
+        </div>
+      </div>
+    </section>
 
     <!-- Start of CTA -->
     <section class="relative bg-gradient-to-r from-blue-500 to-green-400 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 py-8">
@@ -567,17 +574,16 @@
     <!-- end cta -->
 
     <!-- start footer -->
-    <footer class="relative bg-gray-900 text-white px-4 sm:px-8 lg:px-12 xl:px-32 2xl:px-56 pt-12 pb-20 md:pt-24">
-      <div class="flex flex-col lg:flex-row">
-        <div class="w-full md:w-1/2 lg:w-2/6 lg:mx-4 lg:pr-8">
-          <h3 class="font-bold text-2xl">Visa Pass NG</h3>
-          <p class="mt-2 text-gray-400">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy.
-          </p>
+    <footer class="relative bg-green-700 text-white px-4 sm:px-8 lg:px-12 xl:px-32 2xl:px-56 pt-12 pb-20 md:pt-24">
+      <div class="flex flex-col lg:flex-row justify-between">
+        <!-- <div class="w-full md:w-1/2 lg:w-2/6 lg:mx-4 lg:pr-8"> -->
+        <!-- <h3 class="font-bold text-2xl">Visa Pass NG</h3>
+          <p class="mt-2 text-gray-400 font-semibold">
+            Applications made a lot easier.
+          </p> -->
 
-          <!-- Subscribe form -->
-          <form name="subscribe" data-netlify="true" autocomplete="off" netlify-honeypot="bot-field"
+        <!-- Subscribe form -->
+        <!-- <form name="subscribe" data-netlify="true" autocomplete="off" netlify-honeypot="bot-field"
             class="flex items-center mt-6">
             <p class="hidden">
               <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
@@ -604,8 +610,8 @@
                   Something went wrong.</span>
               </div>
             </div>
-          </form>
-        </div>
+          </form> -->
+        <!-- </div> -->
 
         <div class="w-full md:w-1/8 lg:w-1/6 mt-20 lg:mt-0 lg:mx-4">
           <h5 class="uppercase tracking-wider font-semibold">
@@ -727,16 +733,19 @@
             </li> -->
           </ul>
 
-          <p class="text-sm text-gray-400 mt-12">
+          <p class="text-sm text-gray-100 mt-12">
             © 2021 Visa Pass NG<span class="md:hidden">, </span>
             <br class="hidden lg:block" />All Rights Reserved.
           </p>
         </div>
       </div>
-      <div class="flex w-full flex-col items-center text-xs mt-12">
-        <a class="text-gray-400 hover:text-gray-300" href="/privacy_policy.html" rel="nofollow">Privacy Policy</a>
-        <a class="text-gray-400 hover:text-gray-300" href="/terms_and_conditions.html" rel="nofollow">Terms &amp;
-          Conditions</a>
+      <div class="flex flex-row text-sm mt-12 ">
+        <div class="my-0 mx-auto">
+          <a class="text-green-200 hover:text-gray-50 mr-20" href="/privacy_policy.html" rel="nofollow">Privacy
+            Policy</a>
+          <a class="text-green-200 hover:text-gray-50" href="/terms_and_conditions.html" rel="nofollow">Terms &amp;
+            Conditions</a>
+        </div>
       </div>
     </footer>
     <!-- end footer -->
