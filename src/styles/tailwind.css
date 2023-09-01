@@ -5,14 +5,88 @@
 
 @layer components {
   /* #region Background images */
+  .passports-image {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.35),
+        rgba(0, 0, 0, 0.35)
+      ),
+      url('../images/airport-terminal-small.jpg');
+    @apply bg-cover bg-center;
+  }
+
+  .visas-image {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.35),
+        rgba(0, 0, 0, 0.35)
+      ),
+      url('../images/two-gentlemen-travelling-small.jpg');
+    @apply bg-cover bg-center;
+  }
+
   .contact_info {
     background-image: linear-gradient(
         to right,
         rgba(0, 0, 0, 0.65),
         rgba(0, 0, 0, 0.65)
       ),
-      url('../images/contact.jpg');
+      url('../images/contact-small.jpg');
     @apply bg-cover bg-center;
+  }
+
+  .passport-delivery-image {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.65)
+      ),
+      url('../images/delivery-lady-small.jpg');
+    @apply bg-cover;
+    background-position: 60%;
+  }
+  
+  @media (min-width: 768px) {
+    .passports-image {
+      background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.35),
+        rgba(0, 0, 0, 0.35)
+        ),
+        url('../images/airport-terminal.jpg');
+        @apply bg-cover bg-center;
+      }
+      
+      .visas-image {
+        background-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.35),
+          rgba(0, 0, 0, 0.35)
+        ),
+        url('../images/two-gentlemen-travelling.jpg');
+      @apply bg-cover;
+      background-position: 0 0;
+    }
+
+    .contact_info {
+      background-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.65),
+          rgba(0, 0, 0, 0.65)
+        ),
+        url('../images/contact.jpg');
+      @apply bg-cover bg-center;
+    }
+
+    .passport-delivery-image {
+      background-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.65),
+          rgba(0, 0, 0, 0.65)
+        ),
+        url('../images/delivery-lady.jpg');
+      @apply bg-cover bg-center;
+    }
   }
 
   /* #endregion */
@@ -208,4 +282,40 @@
     @apply transition-none;
   }
 
+}
+
+/* Menu dropdown */
+.dropdown {
+  display: block;
+  text-align: left;
+  margin-left: 1.5rem;
+  @apply md:hidden;
+}
+
+@media (min-width: 780px) {
+  
+  .dropdown-container {
+    @apply relative inline-block z-10;
+  }
+  
+  .dropdown {
+    @apply hidden absolute z-50 bg-gray-50 left-2 shadow-md;
+  }
+  
+  .dropdown-container:hover .dropdown {
+    @apply block;
+  }
+  
+  .dropdown a {
+    @apply px-3 py-3 no-underline block text-left;
+  }
+  
+  .dropdown-menu-item {
+    @apply md:px-1 md:hidden lg:block;
+  }
+
+  .dropdown-menu-item:hover {
+    @apply bg-green-100;
+  }
+  
 }
